@@ -41,7 +41,7 @@ class MainMenu(menu):
             self.check_input()
             self.game.display.fill(self.game.negro)
             self.game.display.blit(self.game.fondo_menu, (0,0))
-            self.game.draw_text('Moscas be like', 50, self.game.DISPLAY_W /2, self.game.DISPLAY_H/4) #titulo
+            self.game.draw_text('La pandemie des mouches', 50, self.game.DISPLAY_W /2, self.game.DISPLAY_H/4) #titulo
             self.game.draw_text('Jugar', 30, self.startx,self.starty)
             self.game.draw_text('Opciones', 25,self.optionsx, self.optionsy)
             self.game.draw_text('Creditos', 25, self.creditsx, self.creditsy)
@@ -137,7 +137,6 @@ class OptionsMenu(menu):
             self.game.draw_text('W, A, S, D para moverse', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -100)
             self.game.draw_text('ESPACIO para disparar (en la nave)', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -50)
             self.game.draw_text('...', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 +50)
-            print('xd')
             #self.draw_cursor()
             self.blit_screen()
 
@@ -155,22 +154,4 @@ class CreditsMenu(menu):
             self.game.display.fill(self.game.negro)
             self.game.draw_text('Creditos', 75, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -30)
             self.game.draw_text('Hecho por el Grupo H', 50, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 +20) # falta editar
-            self.blit_screen()
-
-class Controles(menu):
-    def __init__(self, game):
-        menu.__init__(self, game)
-
-    def controles(self):
-        self.run_display = True
-        while self.run_display:
-            self.game.check_events()
-            self.check_input()
-            self.game.display.fill((0,0,0))
-            self.game.draw_text('CONTROLES', 60, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 +50)
-            self.game.draw_text('E para interactuar', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -50)
-            self.game.draw_text('W, A, S, D para moverse', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -100)
-            self.game.draw_text('ESPACIO para disparar (en la nave)', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 )
-            self.game.draw_text('...', 40, self.game.DISPLAY_W/2, self.game.DISPLAY_H/2 -150)
-            self.draw_cursor()
             self.blit_screen()

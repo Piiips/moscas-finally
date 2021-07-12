@@ -3,7 +3,6 @@ import pygame
 from pygame.mixer import pause
 from menu import *
 from stage2 import *
-from pausa import *
 from pygame import image as img
 import sys
 

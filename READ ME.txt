@@ -1,0 +1,3 @@
+Abrir con main.
+
+stage3 se abre por separado

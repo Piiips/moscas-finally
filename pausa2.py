@@ -5,8 +5,8 @@ DISPLAY_W = 1280
 DISPLAY_H = 720 
 blanco = (255,255,255)
 #fuente = pygame.font.SysFont('Consolas', 40)
-
 win = pygame.display.set_mode((1280,720))
+
 def pausa():
 
     pausa = True
